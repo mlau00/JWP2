@@ -31,11 +31,11 @@ class Vector3D:
     def norm(self):
         return math.sqrt(self.__x * self.__x + self.__y * self.__y + self.__z * self.__z)
 
-    def __add__(self, a, b):
-        return a + b
+    def __add__(self, other):
+        return Vector3D(self.__x + other.__x, self.__y + other.__y, self.__z + other.__z)
 
-    def __sub__(self, a, b):
-        return a - b
+    def __sub__(self, other):
+        return Vector3D(self.__x - other.__x, self.__y - other.__y, self.__z + other.__z)
 
     def dot(self, vector2):
         return self.__x * vector2.get_x() + self.__y * vector2.get_y() + self.__z * vector2.get_z()
