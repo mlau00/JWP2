@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Teacher</title>
+</head>
+<body>
+    <h1>Delete Teacher</h1>
+    <form action="{{ url_for('delete_teacher') }}" method="post">
+        <label for="name">Id:</label>
+        <input type="text" id="id" name="id"><br><br>
+        <input type="submit" value="Delete Teacher">
+    </form>
+    <a href="{{ url_for('teachers_list') }}">Back to the list</a>
+</body>
+</html>

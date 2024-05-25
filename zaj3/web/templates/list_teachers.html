@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teachers List</title>
+</head>
+<body>
+    <h1>List of Teachers</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Subject</th>
+                <th>Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for teacher in teachers %}
+            <tr>
+                <td>{{ teacher.id }}</td>
+                <td>{{ teacher.name }}</td>
+                <td>{{ teacher.subject }}</td>
+                <td>{{ teacher.time }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <div> <a href="{{ url_for('create_teacher') }}">Add a new teacher</a> </div>
+    <div> <a href="{{ url_for('delete_teacher') }}">Delete a teacher</a> </div>
+
+</body>
+</html>

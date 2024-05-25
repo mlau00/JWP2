@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Teacher</title>
+</head>
+<body>
+    <h1>Add a New Teacher</h1>
+    <form action="{{ url_for('create_teacher') }}" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject"><br><br>
+        <label for="time">Time:</label>
+        <input type="text" id="time" name="time"><br><br>
+        <input type="submit" value="Add Teacher">
+    </form>
+    <a href="{{ url_for('teachers_list') }}">Back to the list</a>
+</body>
+</html>
