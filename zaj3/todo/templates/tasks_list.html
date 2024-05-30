@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>TODO web app</title>
+	<link rel="stylesheet" href="../static/style.css"/>
+	<script src="../static/scripts.js"></script>
+
+</head>
+<body>
+
+<h2>Tasks</h2>
+<hr>
+<dl>
+	{% for task in tasks %}
+		<div>
+			<dt>{{ task.name }}
+				<a href="{{ url_for('delete_task', task_id=task.id) }}" class="test">
+					<button>Delete</button>
+
+				</a>
+				<a href="{{ url_for('edit_task', task_id=task.id) }}">
+					<button>Edit</button>
+
+				</a>
+				<hr class="list-line">
+			</dt>
+
+		</div>
+	{% endfor %}
+</dl>
+
+<br>
+<a href="{{ url_for('add_task') }}" class="center">Add task</a>
+{##}
+{#<h1>Title</h1> <!-- headlines - all in body -->#}
+{#<h2>Title</h2>#}
+{#<h3>Title</h3>#}
+{#<h4>Title</h4>#}
+{#<h5>Title</h5>#}
+{#<br>#}
+{#<br> <!-- break -->#}
+{#<hr> <!-- horizontal line -->#}
+{##}
+{#<a href="https://www.google.com/"#}
+{#   target="_blank"#}
+{#   title="Go to Google"> <!-- this is a link -->#}
+{#	click me#}
+{#</a>#}
+{#<br>#}
+{#<h4>List</h4>#}
+{#<ul> <!-- unordered list -->#}
+{#	<li>milk</li>#}
+{#	<li>eggs</li>#}
+{#</ul>#}
+{##}
+{#<ol> <!-- ordered list -->#}
+{#	<li>milk</li>#}
+{#	<li>eggs</li>#}
+{#</ol>#}
+{##}
+{#<dl style="background-color: aqua"> <!-- description list -->#}
+{#	<dt>milk</dt>#}
+{#	<dt>eggs</dt>#}
+{#</dl>#}
+{##}
+{#<p>Lorem</p>#}
+{##}
+{##}
+{#<br>#}
+{##}
+{#<h2>Table</h2>#}
+{#<table>#}
+{#	<tr> <!-- table row -->#}
+{#		<td>Mondaydddddddddddddddddddddddddddd</td>#}
+{#		<td>Tuesday</td>#}
+{#	</tr>#}
+{#	<tr align="center"> <!-- table row -->#}
+{#		<td>Next row</td>#}
+{#		<td>Next row 2</td>#}
+{#	</tr>#}
+{#</table>#}
+{##}
+{#<a href="http://www.google.com" target="_blank"> <!-- when clicked it will be redirected here -->#}
+{#	<button id="first_id" onclick="doSomthing()">Test</button>#}
+{#	<!-- button with Test name and it has it and onclick function -->#}
+{##}
+{#	<script> <!-- js script function -->#}
+{#    function doSomthing() {#}
+{#        document.getElementById("first_id").innerHTML = "HI!"#}
+{#    }#}
+{#	</script>#}
+{#</a>#}
+{##}
+{##}
+{#<form method="post">#}
+{#	<label for="username">username:</label>#}
+{#	<input type="text" id="username">#}
+{#	<br>#}
+{#	<input type="submit">#}
+{##}
+{##}
+{#</form>#}
+
+</body>
+</html>

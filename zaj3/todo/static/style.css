@@ -1,0 +1,65 @@
+html {
+    font-family: "Cascadia Mono";
+    color: whitesmoke;
+}
+
+body {
+    background-color: darkgrey;
+}
+
+/*# means it is for the id*/
+#p {
+
+}
+
+/*.something means it is for the entire class .something (class is named in atributes)*/
+.something {
+
+}
+
+dl {
+    background-color: dimgrey;
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 10px;
+    max-width: 600px;
+    text-align: center;
+    margin: 0 auto; /* Center the element horizontally */
+    color: whitesmoke;
+}
+
+dl div {
+    margin: 10px;
+
+}
+
+button {
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: #a945e2;
+    width: 100px;
+    padding: 16px;
+}
+
+input {
+    border-width: 2px;
+    border-radius: 10px;
+}
+
+.list-line {
+    color: whitesmoke;
+}
+
+.test {
+    align-content: end;
+    align-items: end;
+    margin: 0 auto;
+}
+
+.center {
+    text-align: center;
+    display: block;
+}
